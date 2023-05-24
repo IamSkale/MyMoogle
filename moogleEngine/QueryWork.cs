@@ -1,4 +1,5 @@
-﻿public class QueryWork
+﻿namespace MoogleEngine;
+public class QueryWork
 {
     public static List<string> QueryDistribution(string query)
     {
@@ -51,30 +52,39 @@
             return 0;
         }
     }
-    
-    public static double [] QueryCount(Dictionary<string, Dictionary <string, int>> fileDictionaries, string query, string [] fileNames, Dictionary<string, Dictionary <string, double>> tfidfDictionaries, Dictionary<string, Dictionary <string, List<int>>> indexDictionaries, List<List<string>> texts)
-    {           
-        DictionaryWork.GetDictonaries(fileDictionaries,fileNames, tfidfDictionaries,indexDictionaries,texts);                     
-        double [] aux = new double [fileNames.Length];
 
-        for (int i = 0; i < SuggestionWork.Suggestions(query,tfidfDictionaries).Count; i++)
+    public static Dictionary<string, double> QueryTFIDF (Dictionary<string,Dictionary<string, double>> tfidfDictionaries, string query, string[] fileNames)
+    {
+        var queryTFIDF = new Dictionary<string,double>();
+
+        var auxSuggestions = SuggestionWork.Suggestions(query,tfidfDictionaries);
+
+        foreach (string item in auxSuggestions)
         {
-            string word = SuggestionWork.Suggestions(query,tfidfDictionaries)[i];
-
-            for (int j = 0; j < fileNames.Length; j++)
+            int queryCount = 1;
+            int docCount = 0;
+            double documents = fileNames.Length;
+            foreach (var dict in tfidfDictionaries.Values)
             {
-                var auxVar = tfidfDictionaries[fileNames[j]];
-                if(word != null && auxVar.ContainsKey(word.ToLower()))
+                if(dict.ContainsKey(item))
                 {
-                    aux[j] += auxVar[word.ToLower()];
-                }
-                else
-                {
-                    aux[j] = 0;
+                    docCount++;
                 }
             }
+            if(docCount==0)
+            {
+                queryTFIDF[item] = 0;
+            }
+            else if(!queryTFIDF.ContainsKey(item))
+            {
+                queryTFIDF[item] = (1 + Math.Log(1)) * (Math.Log(documents/docCount));
+            }
+            else
+            {
+                queryCount++;
+                queryTFIDF[item] = (1 + Math.Log(queryCount)) * (Math.Log(documents/docCount));
+            }
         }
-
-        return aux; 
+        return queryTFIDF;
     }
 }

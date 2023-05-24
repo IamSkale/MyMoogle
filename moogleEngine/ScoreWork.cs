@@ -1,4 +1,5 @@
-﻿public class ScoreWork
+﻿namespace MoogleEngine;
+public class ScoreWork
 {   
     public static void InsertionSortDescending(double [] arr, string [] arrII) 
     {
@@ -18,43 +19,38 @@
         }
     }
     
-    public static void Score(Dictionary<string, Dictionary <string, int>> fileDictionaries, string query, string [] fileNames, Dictionary<string, Dictionary <string, double>> tfidfDictionaries, Dictionary<string, Dictionary <string, List<int>>> indexDictionaries, List<List<string>> texts)
-    {  
-        if(query == "")
+    public static double[] Score(Dictionary<string,Dictionary<string, double>> tfidfDictionaries, string query, string[] fileNames,Dictionary<string, Dictionary <string, int>> fileDictionaries,Dictionary<string, Dictionary <string, List<int>>> indexDictionaries, Dictionary<string,List<string>> texts)
+    {
+        double [] score = new double[fileNames.Length];
+
+        double queryNorm = 0;
+
+        var auxQueryTFIDF = QueryWork.QueryTFIDF(tfidfDictionaries,query,fileNames);
+
+        foreach (double item in auxQueryTFIDF.Values)
         {
-            Console.WriteLine("Write something the next time");            
+            queryNorm += Math.Pow(item,2);
         }
-        else
+        for (int i = 0; i < fileNames.Length; i++)
         {
-            int auxIndex = 0;
-            for (int i = 0; i < QueryWork.QueryDistribution(query).Count; i++)
-            { 
-                if(!QueryWork.DictContainsWord(SuggestionWork.Suggestions(query,tfidfDictionaries)[i],tfidfDictionaries))
-                {
-                    auxIndex = i;
-                }   
-                if(QueryWork.QueryDistribution(query)[i] != SuggestionWork.Suggestions(query,tfidfDictionaries)[i])
-                {
-                    Console.WriteLine("When you wrote " + QueryWork.QueryDistribution(query)[i] + " maybe you meant " + SuggestionWork.Suggestions(query,tfidfDictionaries)[i]);
-                }      
-            }
-            if(!QueryWork.DictContainsWord(SuggestionWork.Suggestions(query,tfidfDictionaries)[auxIndex],tfidfDictionaries))  
+            double textNorm = 0;
+            foreach (var item in auxQueryTFIDF)
             {
-                Console.WriteLine("You should check your Ortography, " + SuggestionWork.Suggestions(query,tfidfDictionaries)[auxIndex] + " doens't look like nothing in the texts"); 
+                if(tfidfDictionaries[fileNames[i]].ContainsKey(item.Key))
+                {
+                    score[i] += item.Value * tfidfDictionaries[fileNames[i]][item.Key];
+                    textNorm += Math.Pow(tfidfDictionaries[fileNames[i]][item.Key],2);
+                }
+            }
+            if (textNorm!=0)
+            {
+                score[i] = score[i]/(Math.Sqrt((float)queryNorm)*Math.Sqrt((float)textNorm));
             }
             else
             {
-                InsertionSortDescending(QueryWork.QueryCount(fileDictionaries,query, fileNames, tfidfDictionaries,indexDictionaries,texts),fileNames);
-
-                for (int j = 0; j < fileNames.Length; j++)
-                {
-                    if(QueryWork.QueryCount(fileDictionaries,query, fileNames, tfidfDictionaries,indexDictionaries,texts)[j] != 0)
-                    {
-                        Console.WriteLine(fileNames[j]);
-                        Console.WriteLine(SnippetWork.BestSnippet(indexDictionaries[fileNames[j]],query,tfidfDictionaries,fileNames,texts,j));
-                    }   
-                }
+                score[i] = 0;
             }
         }
+        return score;
     }
 }

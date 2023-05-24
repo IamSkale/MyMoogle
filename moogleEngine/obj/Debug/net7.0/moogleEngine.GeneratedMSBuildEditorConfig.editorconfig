@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = moogleEngine
-build_property.ProjectDir = c:\Diego\Escuela\Programacion\Moogle\moogleEngine\
+build_property.RootNamespace = MoogleEngine
+build_property.ProjectDir = C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\

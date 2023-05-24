@@ -1,4 +1,5 @@
-﻿public class SuggestionWork
+﻿namespace MoogleEngine;
+public class SuggestionWork
 {       
     static int GetLevenshteinDistance(string s, string t, string query)
     {
@@ -91,5 +92,25 @@
             }
         } 
         return aux;
+    }
+
+    public static string OnlySuggestions(string query, Dictionary<string, Dictionary <string, double>> tfidfDictionaries)
+    {
+        List<string> suggestions = new List<string>();
+        for (int i = 0; i < Suggestions(query,tfidfDictionaries).Count; i++)
+        {
+            if(Suggestions(query,tfidfDictionaries)[i] != QueryWork.QueryDistribution(query)[i])
+            {
+                suggestions.Add(Suggestions(query,tfidfDictionaries)[i]);
+            }
+        }
+        if(suggestions.Count == 0)
+        {
+            return "";
+        }
+        else
+        {
+            return suggestions[0];
+        } 
     }
 }

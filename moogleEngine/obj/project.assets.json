@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Diego\\Escuela\\Programacion\\Moogle\\moogleEngine\\moogleEngine.csproj",
-      "projectName": "moogleEngine",
-      "projectPath": "C:\\Diego\\Escuela\\Programacion\\Moogle\\moogleEngine\\moogleEngine.csproj",
+      "projectUniqueName": "C:\\Diego\\Escuela\\Programacion\\MyMoogle!\\moogle-main\\MoogleEngine\\MoogleEngine.csproj",
+      "projectName": "MoogleEngine",
+      "projectPath": "C:\\Diego\\Escuela\\Programacion\\MyMoogle!\\moogle-main\\MoogleEngine\\MoogleEngine.csproj",
       "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Diego\\Escuela\\Programacion\\Moogle\\moogleEngine\\obj\\",
+      "outputPath": "C:\\Diego\\Escuela\\Programacion\\MyMoogle!\\moogle-main\\MoogleEngine\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config"

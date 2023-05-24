@@ -1,21 +1,17 @@
-﻿public class SnippetWork
+﻿namespace MoogleEngine;
+public class SnippetWork
 {
-    static List<string []> Snippet(Dictionary<string,List<int>> indexDictionary, string query, Dictionary<string, Dictionary<string,double>> tfidfDictionaries, string[] fileNames, List<List<string>>texts, int filenameIndex)
+    static List<string []> Snippet(Dictionary<string,List<int>> indexDictionary, string query, Dictionary<string, Dictionary<string,double>> tfidfDictionaries, string[] fileNames, Dictionary<string,List<string>>texts, int filenameIndex)
     {
         List<string []> snippets = new List<string[]>();
 
-        string [] queryDistributed = new string [SuggestionWork.Suggestions(query,tfidfDictionaries).Count];
+        var auxSuggestions = SuggestionWork.Suggestions(query,tfidfDictionaries);
 
-        for (int i = 0; i < queryDistributed.Length; i++)
-        {
-            queryDistributed[i] = SuggestionWork.Suggestions(query,tfidfDictionaries)[i];
-        }
-
-        double [] queryTFIDFs = new double [queryDistributed.Length];
+        double [] queryTFIDFs = new double [auxSuggestions.Count];
 
         for (int i = 0; i < queryTFIDFs.Length; i++)
         {
-            queryTFIDFs[i] = QueryWork.GetTFIDF(tfidfDictionaries, QueryWork.QueryDistribution(query)[i], fileNames, filenameIndex);
+            queryTFIDFs[i] = QueryWork.GetTFIDF(tfidfDictionaries, auxSuggestions[i], fileNames, filenameIndex);
         }
 
         double max = 0;
@@ -27,14 +23,14 @@
                 index = i;
             }
         }
-        if(indexDictionary.ContainsKey(queryDistributed[index]))
+        if(indexDictionary.ContainsKey(auxSuggestions[index]))
         {
-            foreach (int item in indexDictionary[queryDistributed[index]])
+            foreach (int item in indexDictionary[auxSuggestions[index]])
             {
                 string[] auxArray = new string[11];
                 for (int i = 0; i < 11; i++)
                 {
-                    auxArray[i] = Take11Words(item,queryDistributed[index],texts,fileNames,filenameIndex)[i];
+                    auxArray[i] = Take11Words(item,auxSuggestions[index],texts,fileNames,filenameIndex)[i];
                 }
                 snippets.Add(auxArray);
             }
@@ -43,7 +39,7 @@
         return snippets;
     }
 
-    static string[] Take11Words(int wordIndex, string word, List<List<string>> texts, string [] fileNames, int filenameIndex)
+    static string[] Take11Words(int wordIndex, string word, Dictionary<string,List<string>> texts, string []fileNames, int filenameIndex)
     {
         string [] elevenWords = new string [11];
 
@@ -51,9 +47,9 @@
 
         for (int i = 0; i < 11; i++)
         {
-            if(((wordIndex - 5 + i) >= 0) && ((wordIndex - 5 + i) < texts[filenameIndex].Count)) 
+            if(((wordIndex - 5 + i) >= 0) && ((wordIndex - 5 + i) < texts[fileNames[filenameIndex]].Count)) 
             {
-                elevenWords[i] = texts[filenameIndex][wordIndex - 5 + i]; 
+                elevenWords[i] = texts[fileNames[filenameIndex]][wordIndex - 5 + i]; 
             }
             else
             {
@@ -63,11 +59,11 @@
         return elevenWords;
     }
 
-    public static string BestSnippet(Dictionary<string,List<int>> indexDictionary, string query, Dictionary<string, Dictionary<string,double>> tfidfDictionaries , string[] fileNames, List<List<string>>texts, int filenameIndex)
+    public static string BestSnippet(Dictionary<string,List<int>> indexDictionary, string query, Dictionary<string, Dictionary<string,double>> tfidfDictionaries , string[] fileNames, Dictionary<string,List<string>>texts, int filenameIndex)
     {
         string [] bestSnippet = new string[11];
 
-        string finalSnippet = "...";
+        string finalSnippet = "";
 
         int wordsAmount = 0;
 
@@ -77,11 +73,15 @@
 
         int auxAmount = 0;
 
-        foreach (string[] array in Snippet(indexDictionary,query,tfidfDictionaries,fileNames,texts,filenameIndex))
+        var snippets = Snippet(indexDictionary,query,tfidfDictionaries,fileNames,texts,filenameIndex);
+
+        var auxSuggestions = SuggestionWork.Suggestions(query,tfidfDictionaries);
+
+        foreach (string[] array in snippets)
         {
             foreach (string word in array)
             {
-                foreach (string item in SuggestionWork.Suggestions(query,tfidfDictionaries))
+                foreach (string item in auxSuggestions)
                 {
                     if(word == item)
                     {
@@ -97,18 +97,20 @@
             wordsAmount = 0;
             arrayIndex++;
         }
-
-        var stringList = Snippet(indexDictionary,query,tfidfDictionaries,fileNames,texts,filenameIndex)[auxIndex];
-
-        for (int i = 0; i < 10; i++)
+        
+        if(snippets.Count>0)
         {
-            if(stringList[i] != "")
-            {
-                finalSnippet += stringList[i] + " ";
-            }
-        }
-        finalSnippet += stringList[10] + "...";
+            var stringList = snippets[auxIndex];
 
+            for (int i = 0; i < 10; i++)
+            {
+                if(stringList[i] != "")
+                {
+                    finalSnippet += stringList[i] + " ";
+                }
+            }
+            finalSnippet += stringList[10];
+        }
         
         return finalSnippet;
     }
