@@ -1,0 +1,54 @@
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.exe
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.deps.json
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.runtimeconfig.json
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.pdb
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.csproj.AssemblyReference.cache
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.AssemblyInfoInputs.cache
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.AssemblyInfo.cs
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.csproj.CoreCompileInputs.cache
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\refint\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.pdb
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.genruntimeconfig.cache
+C:\Diego\Escuela\Programacion\Moogle\DiegosMoogle\DiegosMoogle\moogleEngine\obj\Debug\net7.0\ref\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.csproj.AssemblyReference.cache
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.AssemblyInfoInputs.cache
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.AssemblyInfo.cs
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.csproj.CoreCompileInputs.cache
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\refint\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.pdb
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.exe
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.deps.json
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.runtimeconfig.json
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\bin\Debug\net7.0\moogleEngine.pdb
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\moogleEngine.genruntimeconfig.cache
+C:\Diego\Escuela\Programacion\Nueva carpeta\DiegosMoogle\moogleEngine\obj\Debug\net7.0\ref\moogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\bin\Debug\net7.0\MoogleEngine.deps.json
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\bin\Debug\net7.0\MoogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\bin\Debug\net7.0\MoogleEngine.pdb
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.csproj.AssemblyReference.cache
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.AssemblyInfoInputs.cache
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.AssemblyInfo.cs
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.csproj.CoreCompileInputs.cache
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\refint\MoogleEngine.dll
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.pdb
+C:\Diego\Escuela\Programacion\Nueva carpeta\moogle-main\MoogleEngine\obj\Debug\net7.0\ref\MoogleEngine.dll
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\bin\Debug\net7.0\MoogleEngine.deps.json
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\bin\Debug\net7.0\MoogleEngine.dll
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\bin\Debug\net7.0\MoogleEngine.pdb
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.csproj.AssemblyReference.cache
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.AssemblyInfoInputs.cache
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.AssemblyInfo.cs
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.csproj.CoreCompileInputs.cache
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.dll
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\refint\MoogleEngine.dll
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\MoogleEngine.pdb
+C:\Diego\Escuela\Programacion\MyMoogle!\moogle-main\MoogleEngine\obj\Debug\net7.0\ref\MoogleEngine.dll
