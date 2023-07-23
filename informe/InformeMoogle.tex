@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\begin{document}
+	
+ \Large Buenas, usted está en presencia del informe de mi primer proyecto de programación, \textbf{Moogle!!}.\\
+ \\
+ \Large Este proyecto está basado en un motor de búsqueda bajo el método del modelo vectorial de búsqueda y el método de \textbf{TF-IDF}. A continuación los voy a llevar tras una "breve" explicación de todo el funcionamiento de mi proyecto:\\
+ \\
+ \Large - Primero q todo leo los nombres de todos los archivos de una carpeta, la carpeta Content en este caso, ya que luego nos harán falta dichos nombres.\\
+ \\
+ \Large - Luego creo en función de esos archivos las matrices con las palabras de cada archivo, una matriz con la cantidad de veces que aparece cada palabra en cada texto, una con los valores de \textbf{TF-IDF} de cada palabra en cada texto, otra simplemente con las palabras en sus posiciones y una ultima con dichas posiciones.\\
+ \\
+ \Large - A la hora de buscar implemente un método que vectoriza mi query, tomándolo como otro documento y le calculo el \textbf{TF-IDF} a las palabras de este, así tomando a los documentos como vectores en el espacio se puede calcular el coseno del ángulo que forma la consulta con cada texto y el que tenga el valor más cercano a 1 sería el documento más parecido ya que su diferencia sería mínima (Para el cálculo de dicho coseno se aplica el producto escalar entre estos vectores y se divide entre a norma de estos para dejarlo llegar a valores entre 0 y 1).\\
+ \\
+ \Large - En caso de que hubiera faltas de ortografía en el query o mala escritura de una palabra, empleé la fórmula de la distancia de Levenshtein para ver si hay alguna palabra similar en los textos, en caso de que exista te la sugiere.\\
+ \\
+ \Large - Por último para el Snippet implementé varios métodos para ver del query la palabra con mayor peso en cada texto y así luego busco en cada posición de la palabra en el documento los pedazos de texto de 11 palabras que más elementos de la consulta contenga y así obtener el resultado más óptimo posible.\\
+ \\
+ \Large Esto ha sido un resumen del funcionamiento de mi proyecto, espero que sea legible y que no les cause cáncer del semicolon.
+ \\
+ 
+ \begin{center}
+ 	\underline{\textbf{\huge Muchas gracias}}
+ \end{center}
+ 
+\end{document}
