@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\begin{document}
+	
+\begin{center}
+	
+	\underline{\textbf{\Huge 1er Proyecto de}}\\
+	\vspace{0.5cm}	
+	\underline{\textbf{\Huge Programación: Moogle!!}}\\
+	
+	\vspace{3.3cm}
+	
+	\textbf{\Huge Diego Hernández}\\
+	\vspace{0.5cm}	
+	\textbf{\Huge Rodríguez}\\
+	
+	\vspace{2.3cm}
+	
+	\underline{\Huge C113}\\
+	
+	\vspace{3.3cm}
+	
+	\underline{\Huge July 21st, 2023}\\
+	
+\end{center}
+
+\newpage
+
+\Large Entre las principales características de mi proyecto, existen algunas como el uso del modelo vectorial de búsqueda para determinar el resultado más óptimo para cada consulta.\\
+\\
+\Large Para el funcionamiento de dicho modelo hace falta calcular el \textbf{TF-IDF} de cada palabra de cada texto y de la consulta lo cual utilice las ecuaciones de:\\
+\begin{equation}
+\Large TF = 1 + \log{(wc)}
+\end{equation}
+\begin{equation}
+\Large IDF = \log{(\frac{dc}{wdf})}
+\end{equation}
+\\
+\textbf{\large Leyenda: \\
+	\\
+	\large wc : cantidad de veces que aparece una palabra en un texto\\
+	\\
+	\large dc : cantidad de documentos\\
+	\\
+	\large wdf: cantidad de documentos en los que aparece una palabra\\}
+\\
+\Large Nota: estos valores se refieren a los relativos a cada texto, ya que todo se calcula en función de cada documento dando en la gran mayoría de los casos valores distintos.
+\\
+\Large Luego utilizando esos valores se aplica un producto escalar entre vectores y se dividen por la raíz de los cuadrados de los valores de \textbf{TF-IDF} de cada palabra en el texto y en la consulta y así queda el valor del coseno necesario para devolver un buen resultado.
+
+
+
+	
+\end{document}
